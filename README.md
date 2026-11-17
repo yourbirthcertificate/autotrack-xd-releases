@@ -23,10 +23,11 @@ You also need [ffmpeg](https://ffmpeg.org) on your PATH (`winget install Gyan.FF
 
 - **All five difficulties** (Easy, Normal, Hard, Expert, XD) from one analysis, using every note type the game has: taps, beats, spins, scratches, holds and drags.
 - **Charts that feel like the game's own.** Note counts, spacing and difficulty ratings are learned from the official charts, so Easy stays easy and XD scales with the song.
+- **A preview before you play.** Hear the song with the notes scrolling by, check the lyrics, and mark spots to fix.
 - **The same chart every time** for the same song. Not happy with it? **Reroll** gives a different take.
 - **Careful beat finding.** Tempo is checked section by section, and you can fix a song the analysis gets wrong (see [Fixing a song](#fixing-a-song)).
 - **Synced lyrics** in the game's own format, aligned to the vocals on your PC. Japanese and Korean are shown as romaji. A `.txt` or `.lrc` file next to the song always wins.
-- **Proper names.** Titles are romanised or localised, the in-game category comes from the song's franchise or genre, and album art comes from the file, an image beside it, or an online lookup.
+- **Proper names and art.** Titles are romanised or localised, the in-game category comes from the song's franchise or genre, and album art comes from the file, an image beside it, or an online lookup. Not the cover you wanted? [Pick any other](#changing-the-album-art).
 - **It never overwrites a chart it did not write.** Charts it makes carry a marker, and your other custom charts are left alone.
 
 ## Quality
@@ -38,6 +39,16 @@ The app checks your PC and recommends one. You can change it per batch, or set t
 | **Full** | Separates the song into drums, bass, vocals and the rest with a neural network, on your GPU. Best charts; about a minute per song. Synced lyrics need it. | An NVIDIA graphics card with about 6 GB of video memory and a recent driver (570 or newer). |
 | **Lite** | Fast analysis without separating stems. Good charts in seconds. No synced lyrics. | Any PC. |
 | **Cloud stems** | Stems made by the [MVSEP](https://mvsep.com) web service. **Uploads the song's audio**, so it asks first and is off by default. | An MVSEP API key. |
+
+## Previewing a chart
+
+Pick a chart in the **Library** and press **Preview**. The song plays while the chart's notes scroll down three lanes, blue and red, with a different shape for each kind of note. Switch difficulty, watch the lyrics light up as they are sung, loop a tricky section with **A**, **B** and **Loop**, and set the scroll speed. If the notes feel early or late against the sound (Bluetooth headphones add delay), nudge the **sync offset**; the app remembers it. **Space** plays and pauses, the **arrow keys** jump five seconds, and **1** to **5** pick the difficulty.
+
+When something feels off, press **Mark this spot** (or **M**). It saves the time, the difficulty and an optional note, and **Copy all** puts your notes on the clipboard, ready to paste into a bug report or a to-do list. The preview is a chart view to check timing and feel, not a copy of the game's own screen.
+
+## Changing the album art
+
+Pick a chart in the **Library** and press **Change album art**. The picker is already searching for the song; edit the words to search for the album instead. It looks on iTunes, Deezer and MusicBrainz and shows what it finds, so you can pick any cover, not just the one the app guessed. You can also **choose a picture from your PC** or **paste a link** to one. **Restore original** puts the first cover back. A cover you pick is kept when you reroll the chart, and the game shows it after you restart it. Only the search words you see are sent, and only when you press Search.
 
 ## Fixing a song
 
@@ -84,7 +95,7 @@ Your settings, cache and engines live in `%LOCALAPPDATA%\autotrack-xd` (a portab
 
 ## Privacy
 
-Your audio never leaves your PC, except in the optional Cloud stems quality, which asks first. Looking up lyrics, categories and album art sends only text about the song (title, artist, album, length), and every lookup has a switch in Settings. Lyric lookups also send the project's contact address to lrc.red, because that service asks for one; you can replace it in Settings. The Unison lyrics database is a copy you download once and search on your own PC. There is no telemetry.
+Your audio never leaves your PC, except in the optional Cloud stems quality, which asks first. Looking up lyrics, categories and album art sends only text about the song (title, artist, album, length), and every lookup has a switch in Settings. The album art picker sends only the words in its search box, and only when you press Search. Lyric lookups also send the project's contact address to lrc.red, because that service asks for one; you can replace it in Settings. The Unison lyrics database is a copy you download once and search on your own PC. There is no telemetry.
 
 ## Credits
 
